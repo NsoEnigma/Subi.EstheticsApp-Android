@@ -3,6 +3,7 @@ package com.trabajos.subiappandroid.clasesGenerales
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.trabajos.subiappandroid.clasesUsadasComun.Usuario
 
 /**
  * Clase madre para las actividades del proyecto SubiEsthetics.
@@ -12,6 +13,9 @@ import androidx.appcompat.app.AppCompatActivity
  */
 
 open abstract class ActividadMadre() : AppCompatActivity() {
+
+    var usuarioLogado: Usuario? = null
+
 
     /**
      * Cambia a la pantalla especificada por el nombre de la actividad.

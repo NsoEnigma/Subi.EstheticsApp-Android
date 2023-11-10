@@ -12,10 +12,7 @@
         android:theme="@style/Theme.SubiAppAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".pantallas.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

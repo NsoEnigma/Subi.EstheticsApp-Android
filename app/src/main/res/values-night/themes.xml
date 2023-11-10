@@ -1,16 +1,36 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.SubiAppAndroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.SubiAppAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/beigeMarron</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="barra_contenido">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:bottomLeftRadius">10dp</item>
+        <item name="android:background">@drawable/barra_contenido</item>
+
+    </style>
+
+    <!-- checkbox estilo para aplicacion personalizada -->
+    <style name="recordar_contraseña">
+        <!-- seleccion de color del checkbox -->
+        <item name="colorAccent">@color/beigeMarron</item>
+        <!-- color default -->
+        <item name="android:textColorSecondary">@color/beigeSubi</item>
+
+    </style>
+
+    <!-- Estilo de los botones de la primera pantalla de la aplicacion (Login) -->
+    <style name="botonesInicio" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/beigeSubi</item>
+        <item name="android:background">@drawable/botones_inicio</item>
+        <item name="android:backgroundTint">@color/beigeMarron</item>
+        <item name="android:textAlignment">center</item>
     </style>
 </resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350641301295",
+    "project_id": "subi-esthetics",
+    "storage_bucket": "subi-esthetics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350641301295:android:d385ef8cf2aae11e0ba3da",
+        "android_client_info": {
+          "package_name": "com.trabajos.subiappandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350641301295-pceqmfd8fdenhkeleqvt31be889dem53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOOnGy7y-KKfyPdjalb3zcsSsl76efmB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350641301295-pceqmfd8fdenhkeleqvt31be889dem53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
