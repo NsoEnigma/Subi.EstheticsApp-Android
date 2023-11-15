@@ -3,6 +3,8 @@ package com.trabajos.subiappandroid.pantallas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.InputType
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
@@ -69,6 +71,16 @@ class RegisterActivity : ActividadMadre() {
         // Aplicar el SpannableString al TextView
         textView.text = spannableString
         textView.movementMethod = LinkMovementMethod.getInstance()
+
+        // Establecer el tipo de entrada para texto en minúsculas
+        emailIntroducir.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+        // Agregar un InputFilter para convertir texto a minúsculas
+        val inputFilter = InputFilter { source, _, _, _, _, _ ->
+            source.toString().toLowerCase(Locale.getDefault())
+        }
+
+        emailIntroducir.filters = arrayOf(inputFilter)
 
         botonRegistrarse.setOnClickListener {
             var camposVacios: Boolean = false;

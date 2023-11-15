@@ -16,6 +16,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.text.InputFilter
+import android.text.InputType
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
@@ -69,6 +71,17 @@ class LoginActivity : ActividadMadre() {
         // Aplicar el SpannableString al TextView
         textView.text = spannableString
         textView.movementMethod = LinkMovementMethod.getInstance()
+
+        // Establecer el tipo de entrada para texto en minúsculas
+        emailIntroducir.inputType =
+            InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+        // Agregar un InputFilter para convertir texto a minúsculas
+        val inputFilter = InputFilter { source, _, _, _, _, _ ->
+            source.toString().toLowerCase()
+        }
+
+        emailIntroducir.filters = arrayOf(inputFilter)
 
         /**
          * Con esta funcion conseguiremos que nuestro usuario pueda recordar sus datos para asi cada vez
@@ -190,10 +203,10 @@ class LoginActivity : ActividadMadre() {
                                             usuarioLogado = Usuario(
                                                 "" + document.getString("nombre"),
                                                 "" + document.getString("apellidos"),
-                                                "" + document.getString("email"),
-                                                LocalDate.now()
+                                                "" + document.getString("teléfono"),
+                                                "" + document.getString("email")
                                             )
-                                            this.cambiarAPantalla("")
+                                            this.cambiarAPantalla("pantallas.CitasActivity")
                                         }
 
                                     }

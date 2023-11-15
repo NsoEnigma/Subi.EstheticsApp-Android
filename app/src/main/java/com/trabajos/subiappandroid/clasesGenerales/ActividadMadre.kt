@@ -26,7 +26,7 @@ open abstract class ActividadMadre() : AppCompatActivity() {
     public fun cambiarAPantalla(nombreActividad: String): Unit {
         val intent: Intent = Intent(
             this,
-            Class.forName("com.example.animeviewfinal." + nombreActividad)
+            Class.forName("com.trabajos.subiappandroid." + nombreActividad)
         )
         startActivity(intent)
     }
