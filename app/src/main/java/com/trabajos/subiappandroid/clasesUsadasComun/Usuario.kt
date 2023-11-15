@@ -15,8 +15,8 @@ class Usuario : Parcelable {
     var nombre:String?
     var apellidos:String?
     var contraseña:String
+    var telefono:String?
     lateinit var email:String
-    var fechaNacimiento: LocalDate?
 
     /**
      * Constructor vacío que crea un objeto Usuario sin valores por defecto.
@@ -26,6 +26,7 @@ class Usuario : Parcelable {
         nombre = parcel.readString()
         apellidos = parcel.readString()
         contraseña = parcel.readString()!!
+        telefono = parcel.readString()
         email = parcel.readString()!!
     }
 
@@ -39,19 +40,19 @@ class Usuario : Parcelable {
      * @author Alejandro Asencio Montes
      */
 
-    constructor(nombre: String,apellidos: String,pass: String,email: String,fn: LocalDate) : this() {
+    constructor(nombre: String,apellidos: String,pass: String,telefono: String,email: String) : this() {
         this.nombre = nombre
         this.apellidos = apellidos
         this.contraseña = pass
+        this.telefono = telefono
         this.email = email
-        this.fechaNacimiento = fn
     }
 
-    constructor(nombre: String,apellidos: String,email: String,fn: LocalDate) : this() {
+    constructor(nombre: String,apellidos: String,email: String,telefono: String) : this() {
         this.nombre = nombre
         this.apellidos = apellidos
+        this.telefono = telefono
         this.email = email
-        this.fechaNacimiento = fn
     }
 
     /**
@@ -67,8 +68,8 @@ class Usuario : Parcelable {
 
         this.nombre=""
         this.apellidos=""
+        this.telefono=""
         this.contraseña=""
-        this.fechaNacimiento=null
     }
 
     /**
@@ -83,6 +84,7 @@ class Usuario : Parcelable {
         parcel.writeString(nombre)
         parcel.writeString(apellidos)
         parcel.writeString(contraseña)
+        parcel.writeString(telefono)
         parcel.writeString(email)
     }
 

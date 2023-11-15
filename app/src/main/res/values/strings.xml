@@ -4,10 +4,12 @@
     <string name="contraseña">Contraseña</string>
     <string name="titulo">Subi Esthetics</string>
     <string name="iniciarSesion">Iniciar Sesion</string>
-    <string name="registrarse">Registrate</string>
+    <string name="registrarse">Crear Cuenta</string>
     <string name="introduceEmail">Introduce tu Email</string>
     <string name="introduceContraseña">Introduce tu contraseña</string>
     <string name="usuario">Usuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
     <string name="introduceUsuario">Introduce tu Usuario</string>
     <string name="recordarContraseña">Recordar datos</string>
     <string name="fechaNacimiento">Fecha de Nacimiento</string>
@@ -18,7 +20,8 @@
     <string name="rellenarPasswordNecesario">Tienes que rellenar la contraseña</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="sesionInciada">Sesion iniciada correctamente</string>
-    <string name="registrarmeAhora">¿Todavía no tienes cuenta? Registrate</string>
+    <string name="registrarmeAhora">¿Todavía no tienes cuenta? Regístrate</string>
+    <string name="iniciarSesionAhora">¿Ya tienes cuenta? Iniciar Sesión</string>
     <string name="contraseñaOlvidada">¿Has olvidado tu contraseña? Recupérala</string>
     <string name="tienesQueSerMayorEdad">Tienes que ser mayor de edad</string>
     <string name="almacenamientoInterno">Almacenamiento Interno</string>
@@ -43,11 +46,15 @@
     <string name="modoOscuro">Modo Oscuro</string>
     <string name="rellenarEmail">Tienes que rellenar el email</string>
     <string name="errorVideo">Error cargando el video</string>
-    <string name="rellenarUsuario">Tienes que rellenar el usuario</string>
+    <string name="rellenarUsuario">Tienes que rellenar el nombre</string>
+    <string name="rellenarApellidos">Tienes que rellenar los apellidos</string>
+    <string name="telefono">Teléfono</string>
     <string name="rellenarFecha">Tienes que rellenar la fecha</string>
     <string name="necesitoPermisos">Necesito que me concedas Permisos</string>
     <string name="inicioSesionExitoso">Has iniciado sesion con exito</string>
     <string name="bienvenidoDeNuevo">Bienvenido a AnimeView</string>
     <string name="haIniciadoSesion">ha iniciado sesion</string>
     <string name="rellenarPassword">Tienes que rellenar la contraseña</string>
+    <string name="rellenarTelefono">Tienes que introducir un teléfono</string>
+
 </resources>

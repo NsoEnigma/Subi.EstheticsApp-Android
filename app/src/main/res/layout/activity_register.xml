@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beigeSubi"
-    tools:context=".pantallas.LoginActivity">
+    tools:context=".pantallas.RegisterActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -44,10 +44,52 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/nombreTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:textColor="@color/beigeMarron"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/nombreIntroducir"
+                style="@style/barra_contenido"
+                android:hint=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/apellidosTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apellidos"
+                android:textColor="@color/beigeMarron"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/apellidosIntroducir"
+                style="@style/barra_contenido"
+                android:hint=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
                 android:id="@+id/emailTexto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/email"
                 android:textColor="@color/beigeMarron"
                 android:textSize="15dp"
                 tools:ignore="TextSizeCheck" />
@@ -62,7 +104,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="34dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/contraseñaTexto"
@@ -82,13 +124,28 @@
                 android:inputType="textPassword"
                 android:minHeight="48dp"/>
 
-            <CheckBox
-                android:id="@+id/recordarDatos"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/recordarContraseña"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/telefonoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telefono"
                 android:textColor="@color/beigeMarron"
-                android:theme="@style/recordar_contraseña" />
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/telefonoIntroducir"
+                style="@style/barra_contenido"
+                android:hint=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:minHeight="48dp"/>
+
 
         </LinearLayout>
 
@@ -101,19 +158,12 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/botonLoginInicio"
+                android:id="@+id/botonRegistrar"
                 style="@style/botonesInicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/iniciarSesion" />
+                android:text="@string/registrarse" />
 
-            <TextView
-                android:id="@+id/textoRecuperar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/beigeMarron"
-                android:textAlignment="center"
-                android:text="@string/contraseñaOlvidada" />
         </LinearLayout>
 
     </LinearLayout>
@@ -129,10 +179,10 @@
         >
 
         <TextView
-            android:id="@+id/textoRegistrar"
+            android:id="@+id/textoIniciarSesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/registrarmeAhora"
+            android:text="@string/iniciarSesionAhora"
             android:textColor="@color/beigeMarron"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

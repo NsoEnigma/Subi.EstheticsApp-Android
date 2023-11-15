@@ -11,11 +11,16 @@ package com.trabajos.subiappandroid.pantallas
  */
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.text.SpannableString
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.util.Log
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
@@ -41,6 +46,29 @@ class LoginActivity : ActividadMadre() {
 
         val recordarContraseña: CheckBox = findViewById<CheckBox>(R.id.recordarDatos)
         val botonIniciarSesion: Button = findViewById<Button>(R.id.botonLoginInicio)
+
+        val textView = findViewById<TextView>(R.id.textoRegistrar)
+        val textRegister = getString(R.string.registrarmeAhora)
+        val spannableString = SpannableString(textRegister)
+
+        // Crear un ClickableSpan para la palabra "Regístrate"
+        val clickableSpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                // Abre la nueva actividad aquí, por ejemplo, SignUpActivity
+                val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
+        // Configurar el rango de texto que será cliclable
+        val startIndex = textRegister.indexOf("Regístrate")
+        val endIndex = startIndex + "Regístrate".length
+        spannableString.setSpan(clickableSpan, startIndex, endIndex, 0)
+
+        // Aplicar el SpannableString al TextView
+        textView.text = spannableString
+        textView.movementMethod = LinkMovementMethod.getInstance()
 
         /**
          * Con esta funcion conseguiremos que nuestro usuario pueda recordar sus datos para asi cada vez
