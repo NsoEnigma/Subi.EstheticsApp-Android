@@ -226,7 +226,7 @@ class LoginActivity : ActividadMadre() {
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticado el usuario")
+        builder.setMessage("No se ha podido iniciar sesión")
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
